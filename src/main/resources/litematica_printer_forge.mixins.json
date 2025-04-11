@@ -1,0 +1,24 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "xyz.jxmm.litematica_printer_forge.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "plugin": "xyz.jxmm.litematica_printer_forge.utils.MixinConfigPlugin",
+  "refmap": "litematica_printer_forge.refmap.json",
+  "mixins": [
+    "Litematica.ConfigsMixin",
+    "Litematica.SchematicVerifierMixin",
+    "Litematica.WorldUtilsMixin",
+    "MinecraftClient.ClientPlayerInteractionManagerMixin",
+    "quasiEssentialClient.ItemPlacementContextMixin"
+  ],
+  "client": [
+    "Litematica.GuiConfigsMixin",
+    "Litematica.MinecraftClientMixin",
+    "MinecraftClient.ClientPlayNetworkHandlerMixin",
+    "quasiEssentialClient.ClientPlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
