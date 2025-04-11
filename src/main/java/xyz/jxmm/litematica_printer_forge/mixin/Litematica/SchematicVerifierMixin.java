@@ -47,7 +47,7 @@ public class SchematicVerifierMixin {
 	@Shadow
 	private ClientLevel worldClient;
 
-	@Inject(method = "checkBlockStates", at = @At("HEAD"), cancellable = true)
+	@Inject(method = "checkBlockStates", at = @At("HEAD"), cancellable = true, remap = false)
 	private void handleInventory(int x, int y, int z, BlockState stateSchematic, BlockState stateClient, CallbackInfo ci) {
 		if (!LitematicaMixinMod.VERIFY_INVENTORY.getBooleanValue()) {
 			return;
